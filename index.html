@@ -6,8 +6,15 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <title>6Reina9プロフィール</title>
     <style>
-        img{
+        img.icon{
             border-radius: 50%;
+            width:20%;
+            height:auto;
+        }
+        img.scroll1{
+            border-radius: 50%;
+            width:20%;
+            height:auto;
         }
         section{
             border-2idth:1px;
@@ -21,12 +28,67 @@
         body{
             text-align:center;
         }
+        @keyframes infinity-scroll-left{
+            from {
+                  transform: translateX(0);
+                }
+                  to {
+                  transform: translateX(-100%);
+                }
+                }
+                .scroll-infinity__wrap {
+                  display: flex;
+                  overflow: hidden;
+                }
+                .scroll-infinity__list {
+                  display: flex;
+                  list-style: none;
+                  padding: 0
+                }
+                .scroll-infinity__list--left {
+                  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+                }
+                .scroll-infinity__item {
+                  width: calc(100vw / 6);
+                  flex: 0 0 calc(100vw / 6); /* 幅を固定 */
+                  box-sizing: border-box;
+                  padding: 4px;
+                }
+                .scroll-infinity__item>img {
+                  width: 100%;
+                  height: 100%;
+                  object-fit: cover;  /* 画像の種類が違っても枠にフィット */
+                  /*border-radius: 50%; /* 丸くするなら残す */
+                  display: block;
+                }
+        }
 
     </style>
 </head>
 <body>
+    <div class="scroll-infinity">
+    <div class="scroll-infinity__wrap">
+        <ul class="scroll-infinity__list scroll-infinity__list--left">
+            <li class="scroll-infinity__item"><img src="image/seishun.png"clas="scroll1" /></li>                        
+            <li class="scroll-infinity__item"><img src="image/yamanaka.png"clas="scroll1" /></li>
+            <li class="scroll-infinity__item"><img src="image/kai1.png"clas="scroll1" /></li>
+            <li class="scroll-infinity__item"><img src="image/tii.png"clas="scroll1" /></li>
+            <li class="scroll-infinity__item"><img src="image/pengin.png"clas="scroll1" /></li>
+            <li class="scroll-infinity__item"><img src="image/zikken.jpg"clas="scroll1" /></li>
+        </ul>
+      <ul class="scroll-infinity__list scroll-infinity__list--left">
+        <li class="scroll-infinity__item"><img src="image/seishun.png"clas="scroll1" /></li>                        
+           <li class="scroll-infinity__item"><img src="image/yamanaka.png"clas="scroll1" /></li>
+           <li class="scroll-infinity__item"><img src="image/kai1.png"clas="scroll1" /></li>
+           <li class="scroll-infinity__item"><img src="image/tii.png"clas="scroll1" /></li>
+           <li class="scroll-infinity__item"><img src="image/pengin.png"clas="scroll1" /></li>
+           <li class="scroll-infinity__item"><img src="image/zikken.jpg"clas="scroll1" /></li>
+      </ul>
+</div>
+</div>
+
     <section>
-        <img src="image/icon.png" alt="6Reina9のアイコン画像です">
+        <img src="image/icon.png" alt="6Reina9のアイコン画像です"class="icon">
         <h1>6Reina9</h1>
         <p>のんびり電子の世界を漂ってる兎です</p>
     </section>
